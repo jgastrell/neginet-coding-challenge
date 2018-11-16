@@ -1,0 +1,70 @@
+:root {
+  --default-padding: 20px 20px;
+  --default-font-size: 20px;
+}
+
+.app-body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  background: #212121;
+  color: #fff;
+  display: flex;
+  font-size: var(--default-font-size);
+  flex-direction: column;
+  height: 300px;
+  width: 50vw;
+}
+
+.terminal-body {
+  flex: 1;
+  overflow-y: scroll;
+  padding: var(--default-padding);
+}
+
+.terminal-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.terminal-footer {
+  border-top: 1px solid #fff;
+  height: auto;
+  padding: var(--default-padding);
+  position: relative;
+}
+
+input {
+  border: none;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.terminal-footer::before {
+  content: '>';
+  left: 10px;
+  position: absolute;
+  top: 24px;
+}
+
+.terminal-footer span {
+  bottom: 10px;
+  color: red;
+  font-size: 12px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
