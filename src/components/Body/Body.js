@@ -12,6 +12,10 @@ class Body extends Component {
     errorMessage: ''
   }
 
+  componentDidMount() {
+    this.footerInput.focus()
+  }
+
   handleChange = e => {
     // change the value of the input in the react state
     this.setState({
@@ -113,10 +117,10 @@ class Body extends Component {
             <input
               type="text"
               onKeyDown={ this.handleKeyDown }
-              onChange={this.handleChange}
+              onChange={ this.handleChange }
               placeholder="Insert your mathematical expression"
               value={ this.state.inputValue }
-              ref={ element => this.input = element }
+              ref={ element => this.footerInput = element }
             />
             {/* execute the renderError method that show the error message if there one  */}
             { this.renderError() }
